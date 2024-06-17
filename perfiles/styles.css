@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.profile-container {
+    margin-top: 30px;
+}
+
+.profile {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative; /* Agregamos posición relativa */
+    overflow: hidden; /* Ocultamos cualquier contenido fuera del círculo */
+
+    /* Estilos para la imagen de fondo */
+    background-image: url('https://vignette2.wikia.nocookie.net/arkhamcity/images/3/3d/Arkham_Knight_Azrael.png/revision/latest?cb=20160206125929'); /* URL de la imagen de internet */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Tu CSS actual */
+.hidden {
+    display: none;
+}
+
+.confirmation-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.confirmation-dialog button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.profile {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.profile-name {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 15px;
+}
+
+.confirmation-dialog {
+    /* Estilos previos */
+}
+
+.delete-profile {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container {
+    position: relative; /* Necesario para posicionar el botón dentro del contenedor */
+}
+
+.add-profile-btn {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilos para el formulario */
+.add-profile-form {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    max-width: 300px; /* Nuevo estilo: Ancho máximo del formulario */
+    margin-left: auto; /* Nuevo estilo: Centrar el formulario */
+    margin-right: auto; /* Nuevo estilo: Centrar el formulario */
+}
+
+.add-profile-form h2 {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 16px;
+}
+
+#profile-form input[type="text"],
+#profile-form input[type="file"],
+#profile-form button {
+    width: calc(100% - 20px);
+    padding: 6px;
+    margin-bottom: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#profile-form button {
+    background-color: #666;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+#profile-form button:hover {
+    background-color: #555;
+}
