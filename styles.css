@@ -28,7 +28,7 @@ header h1 {
     position: relative;
     width: 100vw;
     height: 50vh;
-    margin: 0;
+    margin-top: 50px; /* Ajuste para evitar que el slider quede debajo del header */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -51,31 +51,32 @@ header h1 {
 
 .prev, .next {
     position: absolute;
-    top: 30%;
+    top: 50%;
     transform: translateY(-50%);
     background: transparent;
     border: none;
     color: rgba(255, 255, 255, 0.5);
     font-size: 24px;
+    cursor: pointer;
 }
 
 .prev {
-    left: 0px;
+    left: 10px;
 }
 
 .next {
-    right: 0px;
+    right: 10px;
 }
 
 .recommendations {
-    margin-top: 60px;
+    margin-top: 20px;
     padding: 20px;
     text-align: left;
 }
 
 .recommendations h2 {
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .posters {
@@ -116,7 +117,7 @@ header h1 {
     padding: 15px;
     color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 23px;
+    font-size: 16px;
     opacity: 0;
     transition: opacity 0.3s;
     pointer-events: none;
@@ -128,7 +129,7 @@ header h1 {
 
 footer {
     background-color: #333;
-    padding: 5px;
+    padding: 10px;
     position: fixed;
     bottom: 0;
     left: 0;
