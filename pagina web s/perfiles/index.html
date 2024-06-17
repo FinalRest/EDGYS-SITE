@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Perfiles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Selecciona tu perfil</h1>
+        <div class="profile-container">
+            
+            <!-- Aquí puedes colocar los círculos de perfil -->
+            <div class="profile">
+                <a href="file:///C:/Users/rauli/Desktop/pagina%20web%20s/inicio/index.html">
+                <button class="delete-profile">X</button>
+                <span class="profile-name">Azrael</span>
+            </div>
+            <!-- Puedes agregar más perfiles según sea necesario -->
+        <button class="add-profile-btn">Agregar perfil</button>
+        <div class="add-profile-form hidden">
+            <h2>Agregar Perfil</h2>
+            <form id="profile-form">
+                <input type="text" id="name" placeholder="Nombre" required>
+                <input type="file" id="photo" accept="image/*" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="confirmation-dialog hidden">
+        <p>¿Estás seguro de que deseas eliminar este perfil?</p>
+        <button class="confirm-yes">Sí</button>
+        <button class="confirm-no">No</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
