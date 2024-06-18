@@ -78,7 +78,7 @@ header h1 {
 }
 .custom-link {
     color: #f1f1f1; /* Color del texto del enlace */
-    text-decoration: none; /* Elimina la subrayado predeterminado */
+    text-decoration: none; /*Elimina la subrayado predeterminado */
 }
 
 .custom-link:hover {
