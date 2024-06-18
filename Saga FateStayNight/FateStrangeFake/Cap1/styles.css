@@ -2,8 +2,8 @@ body {
     background-color: #000;
     color: #fff;
     font-family: Arial, sans-serif;
-    height: 100%;
     margin: 0;
+    padding: 0;
 }
 
 header {
@@ -11,13 +11,6 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100% - 80px); /* Ajusta este valor según la altura de tu header */
 }
 
 h1 {
@@ -34,11 +27,6 @@ h1 {
     display: inline-block;
 }
 
-.content {
-    text-align: center;
-    padding: 20px;
-}
-
 .video-container {
     display: flex;
     justify-content: center;
@@ -46,21 +34,17 @@ h1 {
     width: 100%;
 }
 
-.video-container iframe {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: auto; /* Ajusta la altura automáticamente según el ancho */
-    display: block; /* Elimina el espacio debajo del iframe */
-    margin: 0 auto; /* Centra horizontalmente */
-    border: 1px solid #444; /* Borde para el iframe*/
+.content {
+    text-align: center;
+    padding: 20px;
 }
 
-.btn-next {
-    position: absolute;
-    bottom: 10px; /* Distancia desde abajo */
-    right: 10px; /* Distancia desde la derecha */
-    background-color: #444;
-    color: #fff;
-    padding: 8px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+/* Estilo para el iframe */
+    .external-page {
+        width: 60%; /* Ancho del iframe */
+        height: 450px; /* Altura del iframe */
+        margin: 0 auto; /* Centrar horizontalmente */
+        border: 1px solid #444; /* Borde para el iframe */
+        overflow-y: scroll; /* Activar desplazamiento vertical */
+        overflow-x: hidden; /* Desactivar desplazamiento horizontal */
 }
