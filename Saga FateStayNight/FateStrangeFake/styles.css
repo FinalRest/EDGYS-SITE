@@ -1,4 +1,4 @@
-body {
+ body {
     background-color: #000;
     color: #fff;
     font-family: Arial, sans-serif;
@@ -6,81 +6,38 @@ body {
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
 header {
-    background-color: #333;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
     padding: 20px 0;
-    text-align: center; /* Centra el contenido del header */
 }
 
-header h1 {
+h1 {
     margin: 0;
-    font-size: 24px;
 }
-.btn {
-    display: inline-block;
-    background-color: #666;
+
+.btn-return {
     color: #fff;
+    background-color: #444;
+    padding: 8px 20px;
     text-decoration: none;
-    padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 .content {
-    padding: 50px 0;
-}
-
-.poster {
-    float: left;
-    width: 260px;
-    height: 370px;
-    margin-right: 20px;
-    overflow: hidden;
-}
-
-.poster img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.info {
-    overflow: hidden;
-}
-
-.info h2 {
-    font-size: 24px;
-}
-
-.info p {
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-.episode-list {
-    background-color: #222;
+    text-align: center;
     padding: 20px;
-    border-radius: 5px;
 }
 
-.episode-list ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.episode-list ul li {
-    margin-bottom: 10px;
-}
-.custom-link {
-    color: #f1f1f1; /* Color del texto del enlace */
-    text-decoration: none; /* Elimina la subrayado predeterminado */
-}
-
-.custom-link:hover {
-    text-decoration: underline; /* Subrayado al pasar el cursor */
+/* Estilo para el iframe */
+    .external-page {
+        width: 60%; /* Ancho del iframe */
+        height: 450px; /* Altura del iframe */
+        margin: 0 auto; /* Centrar horizontalmente */
+        border: 1px solid #444; /* Borde para el iframe */
+        overflow-y: scroll; /* Activar desplazamiento vertical */
+        overflow-x: hidden; /* Desactivar desplazamiento horizontal */
 }
