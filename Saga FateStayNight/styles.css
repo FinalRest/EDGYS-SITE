@@ -2,7 +2,7 @@ body {
     background-image: url('https://i.kym-cdn.com/photos/images/original/000/752/198/fa6.gif'); /* URL completa al GIF */
     background-size: cover; /* Ajusta el tamaño del fondo para cubrir toda la pantalla */
     background-repeat: no-repeat; /* Evita la repetición del fondo */
-    height: 100vh; /* Ajusta la altura del body al 100% del viewport para cubrir toda la pantalla */
+    height: 80vh; /* Ajusta la altura del body al 100% del viewport para cubrir toda la pantalla */
     margin: 0; /* Elimina el margen predeterminado del body */
     padding: 0; /* Elimina el padding predeterminado del body */
 }
@@ -11,7 +11,7 @@ header {
     background-color: #222;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 h1 {
