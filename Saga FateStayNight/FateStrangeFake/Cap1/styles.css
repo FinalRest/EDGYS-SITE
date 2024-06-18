@@ -42,7 +42,7 @@ h1 {
     height: auto; /* Ajusta la altura automáticamente según el ancho */
     display: block; /* Elimina el espacio debajo del iframe */
     margin: 0 auto; /* Centra horizontalmente */
-    border: 1px solid #444; /* Borde para el iframe */
+    border: 1px solid #444; /* Borde para el iframe*/
 }
 
 .btn-next {
