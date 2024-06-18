@@ -4,9 +4,6 @@ body {
     font-family: Arial, sans-serif;
     height: 100%;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 header {
@@ -14,6 +11,13 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 80px); /* Ajusta este valor según la altura de tu header */
 }
 
 h1 {
@@ -39,6 +43,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .video-container iframe {
