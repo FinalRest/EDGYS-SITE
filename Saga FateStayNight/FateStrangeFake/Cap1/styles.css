@@ -43,7 +43,7 @@ h1 {
     .external-page {
         width: 60%; /* Ancho del iframe */
         height: 450px; /* Altura del iframe */
-        margin: 0 auto; /* Centrar horizontalmente */
+        margin: 50 auto; /* Centrar horizontalmente */
         border: 1px solid #444; /* Borde para el iframe */
         overflow-y: scroll; /* Activar desplazamiento vertical */
         overflow-x: hidden; /* Desactivar desplazamiento horizontal */
