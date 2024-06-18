@@ -1,43 +1,22 @@
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDGYS SITE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>EDGYS SITE</h1>
+        <a href="https://finalrest.github.io/EDGYS-SITE/Saga%20FateStayNight/FateStrangeFake/index.html" class="btn-return">REGRESAR</a>
+    </header>
 
-header {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-h1 {
-    margin: 0;
-}
-
-.btn-return {
-    color: #fff;
-    background-color: #444;
-    padding: 8px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: inline-block;
-}
-
-.content {
-    text-align: center;
-    padding: 20px;
-}
-
-/* Estilo para el iframe */
-    .external-page {
-        width: 60%; /* Ancho del iframe */
-        height: 450px; /* Altura del iframe */
-        margin: 0 auto; /* Centrar horizontalmente */
-        border: 1px solid #444; /* Borde para el iframe */
-        overflow-y: scroll; /* Activar desplazamiento vertical */
-        overflow-x: hidden; /* Desactivar desplazamiento horizontal */
-}
+    <section class="content">
+        <div class="video-container">
+            <iframe src="https://mega.nz/embed/Ar0CjK7R#9EOu8pzNW0_RcoO0kBIEyAPNymH3yqACzMT1T2KKJAg" width="640" height="480" allow="autoplay" allowfullscreen></iframe>
+            <a href="#" class="btn-next">Siguiente</a>
+        </div>
+    </section>
+</body>
+</html>
