@@ -20,7 +20,7 @@ body {
 
 header {
     background-color: #333;
-    padding: 10px 0; /* Reduce el padding del header */
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,17 +28,17 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 18px; /* Ajusta el tamaño de la fuente del título */
+    font-size: 20px;
+    margin-left: 20px;
 }
 
 .btn {
-    display: inline-block;
     background-color: #666;
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
-    margin-top: 0; /* Ajusta el margen superior del botón */
+    margin-right: 20px;
 }
 
 .content {
@@ -49,8 +49,9 @@ header h1 {
     width: 100%;
     max-width: 260px;
     height: auto;
-    margin: 0 0 20px auto; /* Mueve el poster a la derecha */
+    margin: 0 auto 20px auto;
     overflow: hidden;
+    margin-left: 20px;
 }
 
 .poster img {
@@ -113,6 +114,7 @@ a:hover {
     
     .poster {
         margin-right: 4%;
+        margin-left: 5%;
     }
     
     .info h2, .info p {
@@ -132,12 +134,6 @@ a:hover {
     
     .poster {
         margin-right: 5%;
+        margin-left: 5%;
     }
 }
-
-    
-    .poster {
-        margin-right: 5%;
-    }
-}
-
