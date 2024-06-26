@@ -19,11 +19,13 @@ body {
 }
 
 header {
-    background-color: #333;
-    padding: 10px 0;
+  width: 100%;
+    padding: 20px;
+    background-color: #1e1e1e;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #333;
 }
 
 header h1 {
@@ -33,16 +35,24 @@ header h1 {
 }
 
 .btn {
-    background-color: #666;
-    color: #fff;
+      padding: 10px 20px;
+    background-color: #333;
+    color: #ffffff;
     text-decoration: none;
-    padding: 10px 20px;
     border-radius: 5px;
-    margin-right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
 }
 
 .content {
-    padding: 50px 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Cambiado a flex-start para alinear desde arriba */
+    padding: 20px;
 }
 
 .poster {
