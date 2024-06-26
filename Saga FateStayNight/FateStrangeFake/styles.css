@@ -21,13 +21,14 @@ body {
 header {
     background-color: #333;
     padding: 20px 0;
-    text-align: center; /* Centra el contenido del header */
+    text-align: center;
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
 }
+
 .btn {
     display: inline-block;
     background-color: #666;
@@ -35,6 +36,7 @@ header h1 {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 .content {
@@ -42,10 +44,10 @@ header h1 {
 }
 
 .poster {
-    float: left;
-    width: 260px;
-    height: 370px;
-    margin-right: 20px;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    margin: 0 auto 20px auto;
     overflow: hidden;
 }
 
@@ -61,11 +63,13 @@ header h1 {
 
 .info h2 {
     font-size: 24px;
+    text-align: center;
 }
 
 .info p {
     font-size: 16px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .episode-list {
@@ -82,4 +86,39 @@ header h1 {
 
 .episode-list ul li {
     margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+    
+    .poster, .info {
+        float: left;
+        width: 48%;
+    }
+    
+    .poster {
+        margin-right: 4%;
+    }
+    
+    .info h2, .info p {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 60%;
+    }
+    
+    .poster, .info {
+        float: left;
+        width: 45%;
+    }
+    
+    .poster {
+        margin-right: 5%;
+    }
 }
