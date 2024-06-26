@@ -88,6 +88,16 @@ header h1 {
     margin-bottom: 10px;
 }
 
+/* Estilos para los enlaces */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* Media Queries */
 @media (min-width: 768px) {
     .container {
@@ -122,3 +132,4 @@ header h1 {
         margin-right: 5%;
     }
 }
+
