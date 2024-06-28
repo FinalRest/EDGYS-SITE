@@ -1,49 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 body {
     background-color: #121212;
     color: #fff;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 header {
+    display: flex;
+    width: auto;
+    margin-top: auto;
+    justify-content: space-between;
     background-color: #333;
-    padding: 10px; /* Reducimos el tamaño del padding */
-    text-align: center; /* Para centrar el contenido */
-    position: fixed; /* Fija el encabezado en la parte superior de la pantalla */
-    top: 0; /* Coloca el encabezado en la parte superior */
-    left: 0; /* Asegura que el encabezado se alinee correctamente en la parte izquierda */
-    width: 100%; /* Asegura que el encabezado ocupe todo el ancho de la pantalla */
-    z-index: 999; /* Asegura que el encabezado esté por encima de otros elementos */
+    padding: 10px;
+    text-align: center;
 }
-
-
 
 header h1 {
     margin: 0;
+    font-size: 24px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input {
+ width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    right: auto;
+}
+
+.search-form button {
+    background-color: #555;
     color: #fff;
-    font-size: 20px; /* Ajusta el tamaño del texto según sea necesario */
+    border: none;
+    padding: 5px 8px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+
+.search-form button:hover {
+    background-color: #777;
+}
+
+.main-content {
+    margin-top: 20px;
+    padding: 0 20px;
 }
 
 .slider {
     overflow: hidden;
     position: relative;
-    width: 100vw; /* Establecemos el ancho al 100% del ancho de la ventana del navegador */
-    height: 50vh; /* Ajustamos la altura al 80% del alto de la ventana del navegador */
-    margin: 0; /* Eliminamos el margen izquierdo y derecho */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Añadimos una sombra */
-    position: relative; /* Ajuste de posición */
+    width: auto;
+    height: 70vh;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .slider .slide {
-    transition: opacity 0.5s ease; /* Añadimos una transición suave de 0.5 segundos para la opacidad */
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .slider .slide img {
-    width: 100%; /* Ancho al 100% del contenedor */
-    height: 100%; /* Altura al 100% del contenedor */
-    object-fit: contain; /* Hacemos que la imagen se ajuste al tamaño del contenedor sin recortarla */
-    transition: transform 0.5s ease; /* Añadimos una transición suave de 0.5 segundos para la transformación */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
 .slider:after {
@@ -52,118 +91,129 @@ header h1 {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 20%; /* Altura del recorte en la parte inferior */
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); /* Gradiente transparente a negro */
+    height: 20%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
 .slide {
-    
     display: none;
-    opacity: 0; /* Inicialmente, establecemos la opacidad en 0 */
-    transition: opacity 1s; /* Agregamos una transición suave para la opacidad *//
+    opacity: 0;
+    transition: opacity 1s;
+    flex: 0 0 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 300px;
 }
 
 .slide img {
     width: 100%;
-    height: auto;
-    object-fit: cover; /* Hacemos que la imagen se adapte al tamaño del contenedor sin deformarse */
-}
-.slide.active {
-    display: block;
-    opacity: 1; /* Cuando una diapositiva está activa, establecemos la opacidad en 1 */
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Agregamos estilos para el botón de navegación */
+.slide.active {
+    display: block;
+    opacity: 1;
+}
 
 .prev, .next {
     position: absolute;
-    top: 30%;
     transform: translateY(-50%);
-    background: transparent; /* Hacer los botones transparentes */
-    border: none; /* Eliminar bordes */
-    color: rgba(255, 255, 255, 0.5); /* Color de la flecha */
-    font-size: 24px; /* Tamaño de la flecha */
+    background-color: rgba(51, 50, 50, 0.151);
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .prev {
-    left: 0px;
+    left: 10px;
+    top: 50%;
+    margin-top: -35px;
 }
 
 .next {
-    right: 0px;
+    right: 10px;
+    top: 50%;
+    margin-top: -35px;
 }
 
 .recommendations {
     margin-top: 20px;
-    text-align: left; /* Para centrar el contenido */
-   
+    padding: 0 20px;
+    text-align: left;
 }
 
 .recommendations h2 {
-    font-size: 20px;
-    font-size: 20px;
-    margin-top: 10px; /* Agregamos un margen superior de 30px */
+    font-size: 22px;
+    margin-top: 10px;
 }
 
 .posters {
-    display: flex; /* Usamos flexbox para alinear los elementos */
-    justify-content: space-between; /* Distribuye los elementos uniformemente a lo largo del contenedor */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
     margin-top: 20px;
+    padding: 0 20px;
 }
 
 .poster {
-    width: calc(30% - 10px); /* Ajusta el ancho del recuadro de poster */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra al recuadro */
-    position: relative; 
-    overflow: hidden; /* Aseguramos que el contenido dentro del poster no se salga del área del poster */
-    transition: all 0.3s; /* Agregamos una transición suave */
+    width: calc(20% - 10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    margin-bottom: 20px;
 }
 
 .poster img {
-    width: 100%; /* Ajusta el tamaño de la imagen para que llene el recuadro */
+    width: 100%;
     height: auto;
 }
 
 .poster:hover {
-    transform: translateY(-5px); /* Eleva ligeramente el poster cuando el cursor pasa por encima */
+    transform: translateY(-5px);
 }
 
 .poster:hover img {
-    filter: blur(3px); /* Aplicamos un efecto de difuminado cuando el cursor pasa por encima del poster */
+    filter: blur(3px);
 }
 
 .poster .description {
-    position: absolute; /* Establecemos posición absoluta para la descripción */
-    top: 0; /* Alineamos la descripción en la parte superior */
-    left: 0; /* Alineamos la descripción en la parte izquierda */
-    width: 100%; /* Cubrimos todo el ancho del poster */
-    height: 100%; /* Cubrimos toda la altura del poster */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para la descripción */
-    padding: 15px; /* Espaciado interno */
-    color: #fff; /* Color del texto */
-    font-family: Arial, sans-serif; /* Tipo de letra */
-    font-size: 23px; /* Tamaño del texto */
-    opacity: 0; /* Ocultamos la descripción inicialmente */
-    transition: opacity 0.3s; /* Agregamos una transición suave para la opacidad */
-    overflow: hidden; /* Aseguramos que el contenido de la descripción no se desborde */
-    pointer-events: none; /* Evitamos que la descripción interrumpa la interacción del usuario con la imagen */
-    box-sizing: border-box; /* Hacemos que el padding se incluya en el ancho y alto total */
-    text-align: left; /* Alineamos el texto a la izquierda */
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    color: #fff;
+    font-size: 19px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    box-sizing: border-box;
+    text-align: left;
 }
 
-
 .poster:hover .description {
-    opacity: 1; /* Mostramos la descripción cuando el cursor pasa por encima del poster */
+    opacity: 1;
 }
 
 footer {
     background-color: #333;
-    padding: 5px;
+    padding: 2.5px;
     position: fixed;
     bottom: 0;
-    left: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 footer nav {
@@ -174,7 +224,7 @@ footer button {
     background-color: #555;
     color: #fff;
     border: none;
-    padding: 5px 15px;
+    padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
     border-radius: 5px;
@@ -182,4 +232,136 @@ footer button {
 
 footer button:hover {
     background-color: #777;
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    }
+    .slider {
+        width: auto;
+        height: 25vh;
+        margin-top: auto;
+    }
+
+    .prev {
+        left: -2.5%;
+        top: 21%;
+        margin-top: -20px;
+        font-size: 1.2em;
+    }
+
+    .next {
+        right:-2.5%;
+        top: 21%;
+        margin-top: -23px;
+        font-size: 1.2em;
+    }
+
+    .poster {
+        width: calc(50% - 10px);
+    }
+
+    .recommendations h2 {
+        font-size: 18px;
+    }
+   
+
+/* Media queries para tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    .slider {
+        width: 100%;
+        height: 45vh;
+        margin-top: auto;
+    }
+
+    .prev {
+        left: 0%;
+        top: 30%;
+        margin-top: -20px;
+        font-size: 1.2em;
+    }
+
+    .next {
+        right: 0%;
+        top: 30%;
+        margin-top: -20px;
+        font-size: 1.2em;
+    }
+
+    .poster {
+        width: calc(33.33% - 10px);
+    }
+}
+
+/* Media queries para laptops */
+@media screen and (min-width: 1025px) and (max-width: 1599px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    .slider {
+        width: 80%;
+        height:75vh;
+        margin-top: auto;
+    }
+
+    .prev {
+        top: 55%;
+        margin-top: -35px;
+        left: 150px;
+    }
+
+    .next {
+        top: 55%;
+        margin-top: -35px;
+        right: 150px;
+    }
+
+    .poster {
+        width: calc(10% - -150px);
+    }
+}
+
+/* Media queries para pantallas grandes */
+@media screen and (min-width: 1600px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    .slider {
+        width: 60%;
+        height: 70vh;
+    }
+
+    .prev {
+        top: 50%;
+        margin-top: -35px;
+    }
+
+    .next {
+        top: 50%;
+        margin-top: -35px;
+    }
+
+    .poster {
+        width: calc(20% - 10px);
+    }
 }
