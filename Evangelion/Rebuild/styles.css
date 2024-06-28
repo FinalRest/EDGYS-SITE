@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: #1e1e1e;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; /* Ajusta el espacio entre elementos */
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.poster {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.info {
+    overflow: hidden;
+}
+
+.info h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.episode-list {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.episode-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.episode-list ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+    
+    .poster, .info {
+        float: left;
+        width: 48%;
+    }
+    
+    .poster {
+        margin-right: 4%;
+        margin-left: 5%;
+    }
+    
+    .info h2, .info p {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 60%;
+    }
+    
+    .poster, .info {
+        float: left;
+        width: 45%;
+    }
+    
+    .poster {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+}
