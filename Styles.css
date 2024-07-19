@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    position: relative;
+    
+}
+
+.search-form input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    background-color: #555;
+    color: #fff;
+    outline: none;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    font-size: 16px;
+    
+}
+
+.search-form input:focus {
+    background-color: #000000;
+}
+
+.search-form button {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    position: absolute;
+    right: -15px;
+    font-size: 16px;
+}
+
+.search-form button:hover {
+    background-color: #444343;
+}
+
+.main-content {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    height: 75vh;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: auto;
+}
+
+.slider .slide {
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.slider:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+    flex: 0 0 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 300px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.prev, .next {
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: rgba(51, 50, 50, 0.151);
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+    top: 50%;
+    margin-top: -35px;
+}
+
+.next {
+    right: 10px;
+    top: 50%;
+    margin-top: -35px;
+}
+
+.recommendations {
+    margin-top: 20px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.recommendations h2 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.poster {
+    width: calc(20% - 10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+.poster img {
+    width: 100%;
+    height: auto;
+}
+
+.poster:hover {
+    transform: translateY(-5px);
+}
+
+.poster:hover img {
+    filter: blur(3px);
+}
+
+.poster .description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    color: #fff;
+    font-size: 19px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.poster:hover .description {
+    opacity: 1;
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .search-form {
+        width: 90%;
+        max-width: none;
+        margin: 10px 0;
+    }
+
+    .search-form input {
+        padding: 10px;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .search-form button {
+        padding: 10px 15px;
+        border-radius: 0 20px 20px 0;
+    }
+
+    .slider {
+        height: 25vh;
+    }
+
+    .prev, .next {
+        top: 28%;
+        font-size: 1.2em;
+    }
+
+    .poster {
+        width: calc(50% - 10px);
+    }
+
+    .recommendations h2 {
+        font-size: 18px;
+    }
+}
+
+/* Media queries para dispositivos móviles y tablets en orientación horizontal */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-form {
+        width: 80%;
+        max-width: none;
+        margin: 10px 0;
+    }
+
+    .slider {
+        height: 35vh;
+    }
+
+    .prev, .next {
+        top: 50%;
+        font-size: 1.2em;
+    }
+
+    .poster {
+        width: calc(50% - 10px);
+    }
+
+    .recommendations h2 {
+        font-size: 20px;
+    }
+}
+
+/* Media queries para tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .search-form {
+        width: 60%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .slider {
+        height: 45vh;
+    }
+
+    .prev, .next {
+        top: 30%;
+        font-size: 1.5em;
+    }
+
+    .poster {
+        width: calc(33.33% - 10px);
+    }
+}
+
+/* Media queries para laptops */
+@media screen and (min-width: 1025px) and (max-width: 1599px) {
+    .search-form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 10px auto;
+        position: relative;
+        right: -28%;
+    }
+    .slider {
+        height: 75vh;
+        width: 80%;
+    }
+
+    .prev {
+        left:150px;
+        top: 50%;
+        font-size: 1.1em;
+    }
+    .next {
+        right: 150px;
+        top: 50%;
+        font-size: 1.1em;
+    }
+
+    .poster {
+        width: calc(25% - 10px);
+    }
+}
+
+/* Media queries para pantallas grandes */
+@media screen and (min-width: 1600px) {
+    .slider {
+        height: 75vh;
+    }
+
+    .prev, .next {
+        top: 50%;
+        font-size: 1.5em;
+    }
+
+    .poster {
+        width: calc(20% - 10px);
+    }
+}
