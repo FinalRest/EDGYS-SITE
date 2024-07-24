@@ -226,6 +226,35 @@ header h1 {
     opacity: 1;
 }
 
+footer {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+footer nav a:hover {
+    background-color: #777;
+}
+
 /* Media queries para dispositivos móviles */
 @media screen and (max-width: 480px) {
     header {
