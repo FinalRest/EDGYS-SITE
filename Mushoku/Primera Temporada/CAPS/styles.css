@@ -63,12 +63,12 @@ h1 {
 }
 
 .video-frame {
-    width: auto;
+    width: 100%;
     max-width: 1000px;
     margin-bottom: 20px;
 }
 
-.video-frame video {
+.video-frame iframe {
     width: 100%;
     height: 500px;
     border: none;
@@ -125,29 +125,67 @@ button.prev a:focus, button.next a:focus {
 
 /* Estilos específicos para móviles */
 @media screen and (max-width: 768px) {
-    .video-description-container {
-        flex-direction: column;
-        align-items: center;
+    .content {
+        padding: 10px;
     }
 
-    .video-frame {
-        position: relative;
-        width: 100%;
-        margin-bottom: 20px; /* Ajuste opcional del margen inferior */
+    .video-frame iframe {
+        height: 300px; /* Ajuste la altura del video para pantallas pequeñas */
     }
 
     .description-box {
-        order: 2; /* Mover la descripción debajo del reproductor */
-        margin-top: 20px; /* Ajuste opcional del margen superior de la descripción */
+        margin-top: 10px;
     }
 
     .buttons-container {
-        order: 3; /* Mover los botones debajo de la descripción */
-        margin-top: 40px; /* Ajuste el margen superior de los botones */
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
     }
 
     button.prev, button.next {
         position: static;
-        margin: 5;
+        transform: none;
+        margin: 0;
+        font-size: 1.5em;
+        padding: 5px;
+        width: 48%;
+    }
+}
+
+/* Estilos específicos para laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .content {
+        padding: 15px;
+    }
+
+    .video-frame {
+        width: 100%;
+    }
+
+    .video-frame iframe {
+        height: 600px; /* Ajuste la altura del video para pantallas de laptops */
+        width: 100%;  /* Ancho al 100% para laptops */
+    }
+
+    .description-box {
+        margin-top: 15px;
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    button.prev, button.next {
+        position: static;
+        transform: none;
+        margin: 0;
+        font-size: 1.75em;
+        padding: 10px;
+        width: 48%;
     }
 }
